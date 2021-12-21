@@ -215,7 +215,79 @@ edadPerrosHumanos(5, 'M');
 edadPerrosHumanos(5, 'X');
 edadPerrosHumanos(5, 'XL');
 ```
-![alt](./img/res_ejercicio_uno.PNG)
+![ejercicio_uno](./img/res_ejercicio_uno.PNG)
+
+2. Crea una función que reciba por parámetro la edad máxima a la que te gustaría llegar (sin bromas por favor) y el número de tu bocadillo favorito que te gusta comer por día, esta debe regresar por consola cuanta cantidad de ese producto necesitarías para poderlo comer por lo que te resta de vida (solicita los parámetros que consideres necesarios por consola).
+
+``` js
+function bocadillosEnVida(edadMaxima, bocadillo, numeroBocadillos) {
+
+    let res = (edadMaxima * 360) * numeroBocadillos;
+    console.log(`De acuerdo a los datos introducidos en los ${edadMaxima} años que vas a vivir, te comeras ${res} ${bocadillo}.`);
+}
+
+bocadillosEnVida(80, 'papas', 1);
+bocadillosEnVida(90, 'gansitos', 0.5);
+bocadillosEnVida(95, 'chocolate', 4);
+```
+
+![ejercicio_dos](./img/res_ejercicio_dos.PNG)
+
+3. Crea una función que calcule la circunferencia y el área de un círculo (usa funciones anidadas) y regrese por consola los resultados obtenidos (solicita los parámetros que consideres necesarios por consola).
+
+``` js
+function circunferenciaCirculo(radioCirculo) {
+
+    let circunferencia = ((2 * (Math.PI)) * radioCirculo).toFixed(2);
+
+    console.log(`La circunferencia del circulo es: ${circunferencia}cm`);
+
+
+    function areaCirculo(circunferencia, radioCirculo) {
+        let area = ((circunferencia * radioCirculo) / 2).toFixed(2)
+
+        console.log(`El area del circulo es:${area}cm`);
+    }
+
+    return areaCirculo(circunferencia, radioCirculo);
+
+}
+
+circunferenciaCirculo(5);
+circunferenciaCirculo(7);
+circunferenciaCirculo(20);
+```
+![ejercicio_tres](./img/res_ejercicio_tres.PNG)
+
+
+4. Crea una función que convierta la temperatura en grados Celsius, Fahrenheit y Kelvin en ese orden y con base en el resultado anterior calcular los siguientes para mostrarlos en consola (funciones anidadas o por separado) (solicita los parámetros que consideres necesarios por consola).
+
+
+5. Crea una función que con base en la palabra ingresada te diga cuantas vocales tiene en total y desgloce la cantidad por cada vocal de la misma (solicita los parámetros que consideres necesarios por consola).
+
+``` js 
+function cuentaVocales(palabra) {
+    let counter = 0;
+    console.log(`Tu palabra es: ${palabra}`);
+    for (let i = 0; i < palabra.length; i++) {
+        if (palabra[i] === "a" || palabra[i] === "e" || palabra[i] === "i" || palabra[i] === "o" || palabra[i] === "u") {
+
+            counter++
+
+            console.log(palabra[i]);
+        }
+
+    }
+    console.log(`Tu palabra tiene ${counter} vocales`);
+}
+
+
+cuentaVocales('paquete');
+cuentaVocales('hipopotamo');
+cuentaVocales('reconocimiento');
+```
+
+![ejercicio_cuatro](./img/res_ejercicio_cuatro.PNG)
 
 
 
