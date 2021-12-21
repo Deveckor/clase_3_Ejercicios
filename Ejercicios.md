@@ -268,9 +268,11 @@ circunferenciaCirculo(20);
 ``` js 
 function cuentaVocales(palabra) {
     let counter = 0;
+        
     console.log(`Tu palabra es: ${palabra}`);
     for (let i = 0; i < palabra.length; i++) {
-        if (palabra[i] === "a" || palabra[i] === "e" || palabra[i] === "i" || palabra[i] === "o" || palabra[i] === "u") {
+        let vocal = palabra[i];
+        if (/[aeiouAEIOU]/.test(vocal)) {
 
             counter++
 
@@ -285,6 +287,7 @@ function cuentaVocales(palabra) {
 cuentaVocales('paquete');
 cuentaVocales('hipopotamo');
 cuentaVocales('reconocimiento');
+cuentaVocales('FRACCIONAMIENTO');
 ```
 
 ![ejercicio_cuatro](./img/res_ejercicio_cuatro.PNG)
