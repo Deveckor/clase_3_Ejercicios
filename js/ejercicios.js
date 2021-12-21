@@ -4,13 +4,13 @@
 // let edad = prompt('Cual es la edad de tu perro.'),
 //     tamanio = prompt('Indique el tamaño de su perro segun su raza, indique una p para pequeño, m para mediana, x para grande y xl para gigante:'),
 //     raza = tamanio.toUpperCase()
-  
-    function edadPerrosHumanos(edad, raza) {
 
-    
+function edadPerrosHumanos(edad, raza) {
 
-    
-     if (raza === 'P' && edad < 16) {
+
+
+
+    if (raza === 'P' && edad < 16) {
         switch (edad) {
             case 1:
                 console.log('Tu perro tiene 15 años humanos');
@@ -224,8 +224,8 @@ edadPerrosHumanos(5, 'XL');
 //     numeroBocadillos = prompt(`¿Cuant@s ${bocadillo} te comes al día?`);
 
 function bocadillosEnVida(edadMaxima, bocadillo, numeroBocadillos) {
-    
-    let res = (edadMaxima*360)*numeroBocadillos;
+
+    let res = (edadMaxima * 360) * numeroBocadillos;
     console.log(`De acuerdo a los datos introducidos en los ${edadMaxima} años que vas a vivir, te comeras ${res} ${bocadillo}.`);
 }
 
@@ -239,14 +239,14 @@ bocadillosEnVida(95, 'chocolate', 4);
 // let radioCirculo = prompt(`Ingresa el radio del circulo que deseas obtener la circunferencia y su area en cm`)
 
 function circunferenciaCirculo(radioCirculo) {
-    
-    let circunferencia = ((2*(Math.PI))*radioCirculo).toFixed(2);
-    
+
+    let circunferencia = ((2 * (Math.PI)) * radioCirculo).toFixed(2);
+
     console.log(`La circunferencia del circulo es: ${circunferencia}cm`);
 
 
     function areaCirculo(circunferencia, radioCirculo) {
-        let area = ((circunferencia * radioCirculo)/2).toFixed(2)
+        let area = ((circunferencia * radioCirculo) / 2).toFixed(2)
 
         console.log(`El area del circulo es:${area}cm`);
     }
@@ -271,13 +271,13 @@ function cuentaVocales(palabra) {
     let counter = 0;
     console.log(`Tu palabra es: ${palabra}`);
     for (let i = 0; i < palabra.length; i++) {
-        if (palabra[i] === "a" || palabra[i] === "e" ||palabra[i] === "i" ||palabra[i] === "o" ||palabra[i] === "u") {
+        if (palabra[i] === "a" || palabra[i] === "e" || palabra[i] === "i" || palabra[i] === "o" || palabra[i] === "u") {
 
             counter++
-            
+
             console.log(palabra[i]);
         }
-        
+
     }
     console.log(`Tu palabra tiene ${counter} vocales`);
 }
